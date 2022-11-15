@@ -1,0 +1,112 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="float-right">{{(usuarioAgregar.id)? 'Editar' : 'Agregar'}} Usuario</h2>
+            <form 
+            (ngSubmit)="guardar()"
+            autocomplete="off">
+    
+    
+                <div class="mb-3 row">
+                    <label class="col-sm-3 col-form-label">Username</label>
+                    <div class="col-sm-9">
+                        <input type="text"
+                        [(ngModel)]="usuarioAgregar.username"
+                               name="username"
+                               class="form-control"
+                               placeholder="nombre del producto"
+                               required
+                               minlength="3">
+                               
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label class="col-sm-3 col-form-label">Contraseña</label>
+                    <div class="col-sm-9">
+                        <input type="password"
+                               [(ngModel)]="usuarioAgregar.password"
+                               name="contraseña"
+                               class="form-control"
+                               placeholder="nombre del producto"
+                               required
+                               minlength="3">
+                               
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label class="col-sm-3 col-form-label">nombre</label>
+                    <div class="col-sm-9">
+                        <input type="text"
+                        [(ngModel)]="usuarioAgregar.nombre"
+                               name="nombre"
+                               class="form-control"
+                               placeholder="nombre del producto"
+                               required
+                               minlength="3">
+                               
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label class="col-sm-3 col-form-label">apellido</label>
+                    <div class="col-sm-9">
+                        <input type="text"
+                        [(ngModel)]="usuarioAgregar.apellido"
+                               name="apellido"
+                               class="form-control"
+                               placeholder="nombre del producto"
+                               required
+                               minlength="3">
+                               
+                    </div>
+                </div>
+    
+                <div class="mb-3 row">
+                    <label class="col-sm-3 col-form-label">Telefono</label>
+                    <div class="col-sm-9">
+                        <input type="text"
+                        [(ngModel)]="usuarioAgregar.phone_number"
+                               name="telefono"
+                               class="form-control"
+                               placeholder="precio del producto"
+                               
+                               >
+                               
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label class="col-sm-3 col-form-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="text"
+                               [(ngModel)]="usuarioAgregar.email"
+                               name="email"
+                               class="form-control"
+                               placeholder="precio del producto"
+                               >
+                               
+                    </div>
+                </div>
+    
+    
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-primary float-end"
+                                type="submit"                               
+                                >
+                        Agregar
+                        </button>
+                        
+                    </div>
+                </div>
+    
+    
+            </form>
+
+        </div>
+    </div>
+</div>

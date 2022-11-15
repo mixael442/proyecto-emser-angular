@@ -1,0 +1,43 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="float-right">{{(proyectoAgregar.id)? 'Editar' : 'Agregar'}} Proyecto</h2>
+            <form 
+            (ngSubmit)="guardar()"
+            autocomplete="off">
+    
+    
+                <div class="mb-3 row">
+                    <label class="col-sm-3 col-form-label">Nombre</label>
+                    <div class="col-sm-9">
+                        <input type="text"
+                               [(ngModel)]="proyectoAgregar.nombre"
+                               name="nombre"
+                               class="form-control"
+                               placeholder="nombre del proyecto"
+                               required
+                               minlength="3">
+                               
+                    </div>
+                </div>
+    
+    
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-primary float-end"
+                                type="submit"                               
+                                >
+                        Agregar
+                        </button>
+                        
+                    </div>
+                </div>
+    
+    
+            </form>
+
+        </div>
+    </div>
+</div>

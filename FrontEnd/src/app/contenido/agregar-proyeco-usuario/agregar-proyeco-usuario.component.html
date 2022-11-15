@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="float-right">Agregar Proyecto-Usuario</h2>
+
+            <form 
+            (ngSubmit)="guardar()"
+            autocomplete="off">
+    
+                <div class="mb-3 row">
+                    <label class="col-sm-3 col-form-label">Usuario</label>
+                    <div class="col-sm-9"> 
+                      <div class="select">
+                        <select name="usuario" (change)="selectUsuario($event)">
+                          <option [value]="usuario.id" *ngFor="let usuario of usuarios" >{{usuario.nombre}}</option>
+                        </select>
+                      </div>
+                    </div>
+                </div>
+
+
+
+                <div class="mb-3 row">
+                    <label class="col-sm-3 col-form-label">Proyecto</label>
+                    <div class="col-sm-9" >
+                      <div class="select">
+                        <select name="proyecto" (change)="selectProyecto($event)">
+                          <option [value]="proyecto.id" *ngFor="let proyecto of proyectos">{{proyecto.nombre}}</option>
+                        </select>  
+                      </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-primary float-end"
+                                type="submit"                               
+                                >
+                        Agregar
+                        </button>
+                        
+                    </div>
+                </div>
+    
+            </form>
+
+        </div>
+    </div>
+</div>
+
+

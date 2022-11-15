@@ -1,0 +1,52 @@
+<h2>Proyecto Usuario Lista</h2>
+
+<div class="mt-4">
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Usuario</th>
+                <th>Proyecto</th>
+                <th  *ngIf="auth.nombre == 'Misael'">Activo</th>
+                <th *ngIf="auth.nombre == 'Misael'" class="text-center">Administrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let proyectousuario of proyectoUsuario">
+                <td>{{proyectousuario.id}}</td>
+                <td>{{proyectousuario.usuario_id.nombre}}</td>
+                <td>{{proyectousuario.proyecto.nombre}}</td>
+                <td *ngIf="auth.nombre == 'Misael'">{{proyectousuario.activo}}</td>
+                <div class="text-center" *ngIf="auth.nombre == 'Misael'">
+                    <button type="button" class="btn btn-danger" (click)="eliminar(proyectousuario.id)">Eliminar</button>
+                    <div class="form-check form-switch">
+                        <input 
+                        class="form-check-input" 
+                        type="checkbox" 
+                        role="switch" 
+                        id="flexSwitchCheckDefault"
+                        [(ngModel)]="proyectousuario.activo"
+                        name="usuario">
+                        <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                      </div>  
+                </div>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    
+    <div class="row" *ngIf="auth.nombre == 'Misael'">
+        <div class="col">
+            <button class="btn btn-primary float-end"
+                    type="button" 
+                    routerLink="/home/agregar-pu"                           
+                    >
+            Agregar nuevo proyecto-usuario
+            </button>
+            
+        </div>
+    </div>
+</div>
+
+

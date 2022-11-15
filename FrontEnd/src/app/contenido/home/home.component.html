@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Home</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/home/usuarios">Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home/proyectos">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home/proyecto-usuario">Usuario-Proyecto</a>
+          </li>
+        </ul>
+        <button id="div_dark" type="button" class="btn btn-dark" (click)="cambiarModo()">Oscuro / Claro</button>
+        <div>
+            <span class="text-primary">{{auth.nombre}}</span>
+            <button class="btn btn-primary position-relative ms-4 me-4" (click)="logout()">
+                Logout
+            </button>
+        </div>
+        <span class="navbar-text">
+          Pagina de Misael Los santos
+        </span>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="container">
+
+        <router-outlet></router-outlet>
+
+  </div>
+
